@@ -76,13 +76,13 @@ public class MainController {
     // Nein = 1 Punkt
 
 
-    @GetMapping("/")
+    @GetMapping("/") // Zeigt die Frage
     public String umfrage(Model model) {
         model.addAttribute("getFrage", questions);
         return "question";
     }
 
-    @GetMapping("/next")
+    @GetMapping("/next") // Holt die nächste Frage und tut die beantwortete Frage weg
     public String nextUmfrage(Question question, Model model) {
         questions = (ArrayList) questions.stream().filter(questionElement -> questionElement.id != question.id).collect(Collectors.toList());
         model.addAttribute("getFrage", questions);
