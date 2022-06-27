@@ -10,7 +10,15 @@ public class Question {
     int id;
     String question;
     Types type;
-    String answer;
+    Boolean answer;
 
+    public Question() {
+    }
 
+    public Question(int id, String question, Types type, Boolean answer) {
+        this.id = id;
+        this.question = question;
+        this.type = type;
+        this.answer = answer;
+    }
 }
