@@ -21,4 +21,6 @@ public class Question {
         this.type = type;
         this.answer = answer;
     }
+
+
 }
