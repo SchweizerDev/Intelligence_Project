@@ -8,9 +8,9 @@
 <div th:each="question : ${getFrage}">
     <h4 th:text="${question.question}"></h4>
     <label>
-        <input type="radio" th:checked="${question.id}">
+        <input type="radio" th:checked="${question.id}"  name="radAnswer">
         Yes
-        <input type="radio">
+        <input type="radio" name="radAnswer">
         No
     </label>
 </div>
