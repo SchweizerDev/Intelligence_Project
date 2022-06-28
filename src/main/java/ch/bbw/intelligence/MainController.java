@@ -3,11 +3,13 @@ package ch.bbw.intelligence;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 @Controller
@@ -31,7 +33,7 @@ public class MainController {
 
     public void getQuestions() {
         questions.add(new Question(1, "asdfsdaf", Types.naturalistic_intelligence, answer));
-        questions.add(new Question(2, "asdfasd", Types.naturalistic_intelligence, answer));
+        questions.add(new Question(2, "1", Types.naturalistic_intelligence, answer));
         questions.add(new Question(3, "fdas", Types.naturalistic_intelligence, answer));
         questions.add(new Question(4, "adf", Types.naturalistic_intelligence, answer));
         questions.add(new Question(5, "asdf", Types.naturalistic_intelligence, answer));
@@ -78,16 +80,16 @@ public class MainController {
 
     @GetMapping("/") // Zeigt die Frage
     public String umfrage(Model model) {
-        model.addAttribute("getFrage", questions);
+        model.addAttribute("setFrage", questions.get(0));
         return "question";
     }
 
-    @GetMapping("/next") // Holt die nächste Frage und tut die beantwortete Frage weg
-    public String nextUmfrage(Question question, Model model) {
+    @PostMapping("/next") // Holt die nächste Frage und tut die beantwortete Frage weg
+    public String nextUmfrage(@ModelAttribute("setFrage")Question question, Model model) {
+        System.out.println(question.answer);
         questions = (ArrayList) questions.stream().filter(questionElement -> questionElement.id != question.id).collect(Collectors.toList());
-        model.addAttribute("getFrage", questions);
+        model.addAttribute("setFrage", questions.get(0));
         return "question";
     }
-
 
 }

@@ -5,14 +5,16 @@
     <title>Umfrage</title>
 </head>
 <body>
-<div th:each="question : ${getFrage}">
-    <h4 th:text="${question.question}"></h4>
+<form th:action="@{/next}" th:object="${setFrage}"  method="Post">
+    <h4 th:text="${setFrage.question}"></h4>
+    <input th:field="*{id}" hidden/>
     <label>
-        <input type="radio" th:checked="${question.id}"  name="radAnswer">
+        <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="1" name="radAnswer">
         Yes
-        <input type="radio" name="radAnswer">
+        <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="0" name="radAnswer">
         No
     </label>
-</div>
+    <button type="submit">Next</button>
+</form>
 </body>
 </html>
