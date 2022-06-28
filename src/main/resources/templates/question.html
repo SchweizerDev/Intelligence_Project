@@ -8,6 +8,7 @@
 <form th:action="@{/next}" th:object="${setFrage}"  method="Post">
     <h4 th:text="${setFrage.question}"></h4>
     <input th:field="*{id}" hidden/>
+    <input th:field="*{type}" hidden/>
     <label>
         <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="1" name="radAnswer">
         Yes

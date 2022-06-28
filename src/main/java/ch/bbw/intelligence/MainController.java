@@ -3,7 +3,6 @@ package ch.bbw.intelligence;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,11 +21,11 @@ public class MainController {
         getQuestions();
     }
 
-    public void plus (Question question) {
-        if (answer) {
-            question.type.setValue(question.type.getValue()+2);
+    public void plus(Question question) {
+        if (question.getAnswer()) {
+            question.type.setValue(question.type.getValue() + 2);
         } else {
-            question.type.setValue(question.type.getValue()+1);
+            question.type.setValue(question.type.getValue() + 1);
         }
     }
 
@@ -85,11 +84,20 @@ public class MainController {
     }
 
     @PostMapping("/next") // Holt die nächste Frage und tut die beantwortete Frage weg
-    public String nextUmfrage(@ModelAttribute("setFrage")Question question, Model model) {
-        System.out.println(question.answer);
+    public String nextUmfrage(@ModelAttribute("setFrage") Question question, Model model) {
+        plus(question);
         questions = (ArrayList) questions.stream().filter(questionElement -> questionElement.id != question.id).collect(Collectors.toList());
-        model.addAttribute("setFrage", questions.get(0));
-        return "question";
+        if(questions.size() != 0) {
+            model.addAttribute("setFrage", questions.get(0));
+            return "question";
+        } else {
+            for (Types type : Types.values()) {
+                System.out.println(type.getValue());
+            }
+            return "result";// Wenn dies gamcht wurde geht es
+
+        }
+
     }
 
 }
