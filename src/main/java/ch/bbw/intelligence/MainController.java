@@ -94,10 +94,11 @@ public class MainController {
             for (Types type : Types.values()) {
                 System.out.println(type.getValue());
             }
-            return "result";// Wenn dies gamcht wurde geht es
+            return "result";
 
         }
 
     }
+
 
 }
