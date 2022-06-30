@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
 <head>
     <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Umfrage</title>
 </head>
 <body>
@@ -15,7 +16,9 @@
         <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="0" name="radAnswer">
         No
     </label>
-    <button type="submit">Next</button>
+    <div id="button">
+        <button type="submit">Next</button>
+    </div>
 </form>
 </body>
 </html>

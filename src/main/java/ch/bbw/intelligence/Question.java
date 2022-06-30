@@ -7,10 +7,10 @@ import lombok.Setter;
 @Setter
 public class Question {
 
-    int id;
-    String question;
-    Types type;
-    Boolean answer;
+    private int id;
+    private String question;
+    private Types type;
+    private Boolean answer;
 
     public Question() {
     }
