@@ -1,13 +1,13 @@
 html, body {
     width: 99%;
     height: 107%;
+    overflow: hidden;
 }
 
 body {
     background: linear-gradient(-10deg, #ee7752, #1b7a9b, #0b445b, #23d5ab);
     background-size: 350% 350%;
     animation: gradient 25s ease infinite;
-
 }
 
 
@@ -26,7 +26,6 @@ label{
 }
 
 button {
-    display: inline-block;
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -43,7 +42,8 @@ button:hover {
 }
 
 form{
-    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
     padding-left: 15.5rem;
     padding-right: 15.5rem;
     background-color: #e0e0e0;
