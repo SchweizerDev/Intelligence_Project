@@ -12,9 +12,9 @@
     <input th:field="*{type}" hidden/>
     <label>
         <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="1" name="radAnswer">
-        Yes
+        Ja
         <input type="radio" th:field="*{answer}" th:checked="${setFrage.id}" value="0" name="radAnswer">
-        No
+        Nein
     </label>
     <div id="button">
         <button type="submit">Next</button>
