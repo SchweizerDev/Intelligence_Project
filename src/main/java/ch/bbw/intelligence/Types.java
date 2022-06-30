@@ -1,4 +1,5 @@
 package ch.bbw.intelligence;
+
 public enum Types {
 
     spacial_intelligence(0),
@@ -12,8 +13,8 @@ public enum Types {
 
     private int value;
 
-    Types(int value) {
-    }
+    Types(int value) {}
+
     public int getValue() {
         return value;
     }
@@ -21,7 +22,5 @@ public enum Types {
     public void setValue(int value) {
         this.value = value;
     }
-
-
 }
 

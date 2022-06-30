@@ -61,16 +61,16 @@ public class MainController {
         questions.add(new Question(28, "", Types.logical_Mathematical_skills, answer));
         questions.add(new Question(29, "", Types.logical_Mathematical_skills, answer));
         questions.add(new Question(30, "", Types.logical_Mathematical_skills, answer));
-        questions.add(new Question(31, "", Types.musical_intelligence, answer));
-        questions.add(new Question(32, "", Types.musical_intelligence, answer));
-        questions.add(new Question(33, "", Types.musical_intelligence, answer));
-        questions.add(new Question(34, "", Types.musical_intelligence, answer));
-        questions.add(new Question(35, "", Types.musical_intelligence, answer));
-        questions.add(new Question(36, "", Types.spacial_intelligence, answer));
-        questions.add(new Question(37, "", Types.spacial_intelligence, answer));
-        questions.add(new Question(38, "", Types.spacial_intelligence, answer));
-        questions.add(new Question(39, "", Types.spacial_intelligence, answer));
-        questions.add(new Question(40, "asdfsdaf", Types.spacial_intelligence, answer));
+        questions.add(new Question(31, "Fühlst du jeden Ton, Rhytmus und Melodie?", Types.musical_intelligence, answer));
+        questions.add(new Question(32, "Komponierst du selber Lieder?", Types.musical_intelligence, answer));
+        questions.add(new Question(33, "Spielst du eines oder mehrere Instrumente?", Types.musical_intelligence, answer));
+        questions.add(new Question(34, "Hörst du bei Liedern die Instrumente heraus?", Types.musical_intelligence, answer));
+        questions.add(new Question(35, "Hörst du täglich mehrere Stunden Musik?", Types.musical_intelligence, answer));
+        questions.add(new Question(36, "Bist du gut in Geometrie", Types.spacial_intelligence, answer));
+        questions.add(new Question(37, "Hast du eine gute Orientierung", Types.spacial_intelligence, answer));
+        questions.add(new Question(38, "Fällt es dir einfach ein Würfel im Geiste zu drehen", Types.spacial_intelligence, answer));
+        questions.add(new Question(39, "Kannst du dir ein noch nicht gebautes Gebeude  Geistlich vorstellen", Types.spacial_intelligence, answer));
+        questions.add(new Question(40, "Kannst du dir vorstellen wie viele Tische in einem Raum passen ohne zu wissen wie gross die Tische sind", Types.spacial_intelligence, answer));
 
     }
     // Ja = 2 Punkte
