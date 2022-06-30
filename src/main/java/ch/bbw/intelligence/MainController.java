@@ -36,11 +36,11 @@ public class MainController {
         questions.add(new Question(3, "fdas", Types.naturalistic_intelligence, answer));
         questions.add(new Question(4, "adf", Types.naturalistic_intelligence, answer));
         questions.add(new Question(5, "asdf", Types.naturalistic_intelligence, answer));
-        questions.add(new Question(6, "asdf", Types.body_Kinesthetic_intelligence, answer));
-        questions.add(new Question(7, "asdf", Types.body_Kinesthetic_intelligence, answer));
-        questions.add(new Question(8, "asdf", Types.body_Kinesthetic_intelligence, answer));
-        questions.add(new Question(9, "asdf", Types.body_Kinesthetic_intelligence, answer));
-        questions.add(new Question(10, "asdf", Types.body_Kinesthetic_intelligence, answer));
+        questions.add(new Question(6, "Übst du eine Sportart aus?", Types.body_Kinesthetic_intelligence, answer));
+        questions.add(new Question(7, "Interessiert dich Muskelaufbau?", Types.body_Kinesthetic_intelligence, answer));
+        questions.add(new Question(8, "Ist es dir wichtig Pünklich zu sein", Types.body_Kinesthetic_intelligence, answer));
+        questions.add(new Question(9, "Bis du jemand der alles perfekt haben will", Types.body_Kinesthetic_intelligence, answer));
+        questions.add(new Question(10, "Stehst du gerne auf der Tanzfläche und zeigst deine Skills", Types.body_Kinesthetic_intelligence, answer));
         questions.add(new Question(11, "asdf", Types.interpersonal_intelligence, answer));
         questions.add(new Question(12, "adsf", Types.interpersonal_intelligence, answer));
         questions.add(new Question(13, "asdfsdaf", Types.interpersonal_intelligence, answer));
