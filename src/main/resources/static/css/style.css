@@ -1,7 +1,6 @@
 html, body {
-    width: 99%;
-    height: 107%;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -26,6 +25,16 @@ h4{
     margin-bottom: 1.4rem;
 }
 
+p3 {
+    font-family: "Comic Sans MS", serif;
+    text-align: center;
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
+    font-weight: bold;
+}
+
 label{
     display: block;
     text-align: center;
@@ -36,13 +45,13 @@ label{
 button {
     cursor: pointer;
     border: 1px solid transparent;
-    border-radius: 4px;
-    line-height: 34px;
-    font-size: 14px;
+    border-radius: 10px;
+    line-height: 50px;
+    font-size: 15px;
     color: #ffffff;
     background-color: #007c89;
-    padding: 0 15px;
-    margin: 25px;
+    padding: 0 30px;
+    margin: 40px;
 }
 button:hover {
     color: #ffffff;
@@ -59,9 +68,82 @@ form{
     width: auto;
 }
 
+p2{
+    position: center;
+    color: black;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+}
+
 p{
     position: absolute;
     left: 0;
     bottom: 0;
     color: #ced0ce;
+}
+
+footer {
+    align-items: center;
+    background-color: transparent;
+    bottom: 0;
+    color: #ffffff;
+    display: flex;
+    font-size: 17px;
+    font-family: "Comic Sans MS";
+    height: 70px;
+    justify-content: center;
+    font-style: italic;
+    position: static;
+    width: 100%;
+    z-index: 1;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+input:checked {
+    border: 6px solid black;
+}
+
+button,
+legend {
+    color: white;
+    font-weight: bold;
+    background-color: #10a8b6;
+    padding: 5px 20px;
+    border-radius: 0;
+    border: 0;
+    font-size: 14px;
+}
+
+button:hover,
+button:focus {
+    color: #ffffff;
+}
+
+button:active {
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+}
+
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: transparent;
 }
