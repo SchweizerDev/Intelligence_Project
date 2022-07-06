@@ -3,6 +3,9 @@ body {
   align-items: center;
   justify-content: space-evenly;
   background-color: beige;
+  background: linear-gradient(-10deg, #ee7752, #1b7a9b, #0b445b, #23d5ab);
+  background-size: 350% 350%;
+  animation: gradient 25s ease infinite;
 }
 
 .legend-container>span {
