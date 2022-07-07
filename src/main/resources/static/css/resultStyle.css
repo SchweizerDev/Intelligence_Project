@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: beige;
+  background: linear-gradient(-10deg, #ee7752, #1b7a9b, #0b445b, #23d5ab);
+  background-size: 350% 350%;
+  animation: gradient 25s ease infinite;
+}
+
+.legend-container>span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+
+.legend-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.spacial_intelligence {
+  background-color: #fb7c64;
+}
+
+.body_Kinesthetic_intelligence {
+  background-color: #f8de6d;
+}
+
+.musical_intelligence {
+  background-color: #73eba3;
+}
+
+.lingustic_intelligence {
+  background-color: #64c7cc;
+}
+
+.logical_Mathematical_skills {
+  background-color: #638bfb;
+}
+
+.interpersonal_intelligence {
+  background-color: #b3aee4;
+}
+
+.intrapersonal_intelligence {
+  background-color: pink;
+}
+
+.naturalistic_intelligence {
+  background-color: #74cc64;
+}
+
+.pie {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    height: 98vh;
+  }
+
+  .pie {
+    margin-bottom: 60px;
+  }
+}

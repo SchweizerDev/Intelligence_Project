@@ -14,7 +14,10 @@ import java.util.stream.Collectors;
 @Controller
 public class MainController {
 
-    boolean answer;
+    private int count;
+    private int total;
+    private float startDeg;
+    private boolean answer;
     ArrayList<Question> questions = new ArrayList<>();
 
     public MainController() {
@@ -79,25 +82,38 @@ public class MainController {
     @GetMapping("/") // Zeigt die Frage
     public String umfrage(Model model) {
         model.addAttribute("setFrage", questions.get(0));
+        Types.spacial_intelligence.setValue(0);
+        Types.body_Kinesthetic_intelligence.setValue(0);
+        Types.musical_intelligence.setValue(0);
+        Types.lingustic_intelligence.setValue(0);
+        Types.logical_Mathematical_skills.setValue(0);
+        Types.interpersonal_intelligence.setValue(0);
+        Types.intrapersonal_intelligence.setValue(0);
+        Types.naturalistic_intelligence.setValue(0);
+        count = 0;
+        total = 0;
+        startDeg = 0;
         return "question";
     }
 
     @PostMapping("/next") // Holt die nächste Frage und tut die beantwortete Frage weg
     public String nextUmfrage(@ModelAttribute("setFrage") Question question, Model model) {
+        count++;
         plus(question);
-        questions = (ArrayList) questions.stream().filter(questionElement -> questionElement.getId() != question.getId()).collect(Collectors.toList());
-        if(questions.size() != 0) {
-            model.addAttribute("setFrage", questions.get(0));
+        //questions = (ArrayList) questions.stream().filter(questionElement -> questionElement.getId() != question.getId()).collect(Collectors.toList());
+        if (count < 40) {
+            model.addAttribute("setFrage", questions.get(count));
             return "question";
         } else {
             for (Types type : Types.values()) {
-                System.out.println(type.getValue());
+                total += type.getValue();
+            }
+            for (Types type : Types.values()) {
+                model.addAttribute(type.name(), type.getValue());
+                model.addAttribute("css_"+type.name(), ((360 / total * type.getValue()) + startDeg));
+                startDeg += 360 / total * type.getValue();
             }
             return "result";
-
         }
-
     }
-
-
 }
