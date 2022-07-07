@@ -11,42 +11,57 @@
 <p2>Du hast den Test erfolgreich abgeschlossen! Das Ergebnis findest du hier.</p2>
 <br>
 <section>
-<div>
-    <div class="pie"></div>
-</div>
-</section>
-
-<br>
-<br>
     <div>
-        <div class="legend-container"><span class="spacial_intelligence"></span> <div> Räumliche Intelligenz  </div> <span th:text="${spacial_intelligence}"></span></div>
-        <div class="legend-container"><span class="body_Kinesthetic_intelligence"></span> <div> Körperliche Intelligenz  </div> <span th:text="${body_Kinesthetic_intelligence}"></span></div>
-        <div class="legend-container"><span class="musical_intelligence"></span> <div> Musikalische Intelligenz  </div> <span th:text="${musical_intelligence}"></span></div>
-        <div class="legend-container"><span class="lingustic_intelligence"></span> <div> Sprachliche Intelligenz  </div> <span th:text="${lingustic_intelligence}"></span></div>
-        <div class="legend-container"><span class="logical_Mathematical_skills"></span> <div> Mathematische Intelligenz  </div> <span th:text="${logical_Mathematical_skills}"></span></div>
-        <div class="legend-container"><span class="interpersonal_intelligence"></span> <div> Emotionale Intelligenz  </div> <span th:text="${interpersonal_intelligence}"></span></div>
-        <div class="legend-container"><span class="intrapersonal_intelligence"></span> <div> Intrapersonelle Intelligenz  </div> <span th:text="${intrapersonal_intelligence}"></span></div>
-        <div class="legend-container"><span class="naturalistic_intelligence"></span> <div> Natürliche Intelligenz  </div> <span th:text="${naturalistic_intelligence}"></span></div>
+        <div class="pie"></div>
     </div>
+</section>
+<br>
+<br>
+<div>
+    <div class="legend-container"><span class="spacial_intelligence"></span>
+        <div> Räumliche Intelligenz</div>
+        <span th:text="${spacial_intelligence}"></span></div>
+    <div class="legend-container"><span class="body_Kinesthetic_intelligence"></span>
+        <div> Körperliche Intelligenz</div>
+        <span th:text="${body_Kinesthetic_intelligence}"></span></div>
+    <div class="legend-container"><span class="musical_intelligence"></span>
+        <div> Musikalische Intelligenz</div>
+        <span th:text="${musical_intelligence}"></span></div>
+    <div class="legend-container"><span class="lingustic_intelligence"></span>
+        <div> Sprachliche Intelligenz</div>
+        <span th:text="${lingustic_intelligence}"></span></div>
+    <div class="legend-container"><span class="logical_Mathematical_skills"></span>
+        <div> Mathematische Intelligenz</div>
+        <span th:text="${logical_Mathematical_skills}"></span></div>
+    <div class="legend-container"><span class="interpersonal_intelligence"></span>
+        <div> Emotionale Intelligenz</div>
+        <span th:text="${interpersonal_intelligence}"></span></div>
+    <div class="legend-container"><span class="intrapersonal_intelligence"></span>
+        <div> Intrapersonelle Intelligenz</div>
+        <span th:text="${intrapersonal_intelligence}"></span></div>
+    <div class="legend-container"><span class="naturalistic_intelligence"></span>
+        <div> Natürliche Intelligenz</div>
+        <span th:text="${naturalistic_intelligence}"></span></div>
+</div>
 <br>
 <br>
 <footer class="fixed-footer">
-    <p4>Made with ❤️ from Luca Dubi, Jannis Beichler, Denis Meyer & Ares Dovalo</p4>
+    <center><p4>Made with ❤️ from Luca Dubi, Jannis Beichler, Denis Meyer & Ares Dovalo</p4></center>
 </footer>
 <br>
 <br>
 </body>
 <style th:inline="css">
-.pie {
-  background-image: conic-gradient(
-      #fb7c64 [[${css_spacial_intelligence}]]deg,
-      #f8de6d 0 [[${css_body_Kinesthetic_intelligence}]]deg,
-      #73eba3 0 [[${css_musical_intelligence}]]deg,
-      #64c7cc 0 [[${css_lingustic_intelligence}]]deg,
-      #638bfb 0 [[${css_logical_Mathematical_skills}]]deg,
-      #b3aee4 0 [[${css_interpersonal_intelligence}]]deg,
-      #ffc0cb 0 [[${css_intrapersonal_intelligence}]]deg,
-      #74cc64 0 [[${css_naturalistic_intelligence}]]deg);
-}
+    .pie {
+        background-image: conic-gradient(
+                #fb7c64 [[${css_spacial_intelligence}]] deg,
+                #f8de6d 0 [[${css_body_Kinesthetic_intelligence}]] deg,
+                #73eba3 0 [[${css_musical_intelligence}]] deg,
+                #64c7cc 0 [[${css_lingustic_intelligence}]] deg,
+                #638bfb 0 [[${css_logical_Mathematical_skills}]] deg,
+                #b3aee4 0 [[${css_interpersonal_intelligence}]] deg,
+                #ffc0cb 0 [[${css_intrapersonal_intelligence}]] deg,
+                #74cc64 0 [[${css_naturalistic_intelligence}]] deg);
+    }
 </style>
 </html>

@@ -8,9 +8,11 @@
 </head>
 <body>
 <h4 id="title">Intelligence Test</h4>
-<form th:action="@{/next}" th:object="${setFrage}"  method="Post">
+<form th:action="@{/next}" th:object="${setFrage}" method="Post">
     <br>
-    <center><p3 th:text="${setFrage.question}"></p3></center>
+    <center>
+        <p3 th:text="${setFrage.question}"></p3>
+    </center>
     <br>
     <br>
     <input th:field="*{id}" hidden/>
@@ -23,7 +25,9 @@
         <p2>Nein, trifft nicht ganz oder gar nicht zu</p2>
     </label>
     <div id="button">
-        <center><button type="submit">Nächste Frage</button></center>
+        <center>
+            <button type="submit">Nächste Frage</button>
+        </center>
     </div>
 </form>
 <footer class="fixed-footer">
